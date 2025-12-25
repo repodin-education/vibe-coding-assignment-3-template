@@ -1,13 +1,5 @@
 # Assignment 2: E2E Hello World (Server → Browser)
 
-> **"RepodIn Education is a teacher-first management and analytics layer on top of GitHub Classroom."**
-
-**Document Version:** 1.0
-**Last Updated:** 2025-12-20
-**Status:** Production
-**Maintainer:** RepodIn Education Team
----
-
 ## Learning Objectives
 
 By completing this assignment, you will:
