@@ -1,23 +1,30 @@
-# Assignment 2: E2E Hello World (Server → Browser)
+# Assignment 3: Mini Feature Implementation
+
+> **"RepodIn Education is a teacher-first management and analytics layer on top of GitHub Classroom."**
+
+**Document Version:** 1.1
+**Last Updated:** 2025-12-29
+**Status:** Production
+**Maintainer:** RepodIn Education Team
+---
 
 ## Learning Objectives
 
 By completing this assignment, you will:
-- Build a complete end-to-end web application
-- Create a server with an API endpoint
-- Create a client that consumes the API
-- Use Cursor AI to generate code effectively
-- Document your development process
+- Extend an existing application with new functionality
+- Practice feature planning and implementation
+- Integrate new code with existing codebase
+- Document feature implementation
+- Demonstrate creativity and problem-solving
 
 ---
 
 ## Prerequisites
 
-- Completed Assignment 1
-- Node.js (v18+) **OR** Python (v3.11+) installed
+- Completed Assignment 2 (E2E Hello World)
+- Working Node.js server and client from Assignment 2
+- Understanding of Node.js + Express basics
 - Cursor AI installed and configured
-- Git installed and configured
-- Basic understanding of HTTP and APIs
 
 ---
 
@@ -25,86 +32,89 @@ By completing this assignment, you will:
 
 ### Goal
 
-Build a complete minimal app pipeline:
-- A Node.js or Python server (you choose)
-- Returns "Hello Vibe!" from an API endpoint
-- Simple static HTML page fetches the message and displays it in the browser
-- All generated using Cursor AI
+Extend your Hello World app from Assignment 2 with **one new feature**. Choose a feature that adds value and demonstrates your understanding.
 
-### Step 1: Choose Your Stack
+### Step 1: Choose Your Feature
 
-Choose either:
-- **Node.js + Express** (recommended if you know JavaScript)
-- **Python + Flask** (recommended if you know Python)
+Select one feature from the examples below, or create your own:
 
-### Step 2: Create the Server
+#### Example Features:
 
-#### For Node.js Students:
+1. **Timestamp Feature:**
+   - Display current time with message: "Hello Vibe! The time is 12:30."
+   - Server returns current timestamp
+   - Client displays formatted time
 
-1. Use Cursor AI to generate an Express server
-2. Create endpoint: `GET /api/hello`
-3. Endpoint should return: `{ message: "Hello Vibe!" }`
-4. Server should run on port 3000 (or environment variable PORT)
+2. **Refresh Button:**
+   - Add a button "Refresh Message"
+   - Clicking button fetches new message
+   - Updates display without page reload
 
-**Example prompt for Cursor:**
-```
-Create a Node.js Express server with an endpoint GET /api/hello that returns { message: "Hello Vibe!" }. The server should run on port 3000 and include CORS headers for local development.
-```
+3. **Random Vibes Endpoint:**
+   - Create new endpoint `/api/vibe`
+   - Returns random positive messages
+   - Client can fetch random vibes
 
-#### For Python Students:
+4. **CSS Styling:**
+   - Add attractive CSS styling
+   - Make page visually appealing
+   - Responsive design (optional)
 
-1. Use Cursor AI to generate a Flask server
-2. Create endpoint: `GET /api/hello`
-3. Endpoint should return: `{ message: "Hello Vibe!" }`
-4. Server should run on port 3000 (or environment variable PORT)
+5. **Server Logging:**
+   - Add console logging to server
+   - Log requests and responses
+   - Track usage
 
-**Example prompt for Cursor:**
-```
-Create a Python Flask server with an endpoint GET /api/hello that returns { message: "Hello Vibe!" }. The server should run on port 3000 and include CORS headers for local development.
-```
+6. **Error Handling:**
+   - Add error handling message
+   - Display user-friendly errors
+   - Handle network failures gracefully
 
-### Step 3: Create the Client
+**Or create your own feature!** Be creative, but keep it simple and focused.
 
-1. Use Cursor AI to generate an HTML page
-2. HTML should:
-   - Load with a clean page
-   - Call `/api/hello` using `fetch()`
-   - Display the message inside `<div id="output"></div>`
+### Step 2: Plan Your Feature
 
-**Example prompt for Cursor:**
-```
-Create an HTML page that fetches from http://localhost:3000/api/hello and displays the message in a div with id="output". Include error handling.
-```
+1. **Document your plan:**
+   - What feature will you add?
+   - How will it work?
+   - What changes are needed?
 
-### Step 4: Test Your Application
+2. **Consider integration:**
+   - How does it fit with existing code?
+   - Will it break existing functionality?
+   - What files need to be modified?
 
-1. **Start the server:**
-   - Node.js: `npm start` or `node server/index.js`
-   - Python: `python server/app.py` or `flask run`
+### Step 3: Implement Your Feature
 
-2. **Open the HTML page:**
-   - Open `client/index.html` in your browser
-   - Or serve it through your server
+1. **Use Cursor AI:**
+   - Generate code for your feature
+   - Integrate with existing code
+   - Test as you go
 
-3. **Verify it works:**
-   - You should see "Hello Vibe!" displayed
-   - Check browser console for errors
-   - Test the endpoint directly: `curl http://localhost:3000/api/hello`
+2. **Example prompts:**
+   - "Add a timestamp to the hello message that shows the current time"
+   - "Add a refresh button that fetches a new message when clicked"
+   - "Create a new endpoint /api/vibe that returns random positive messages"
 
-### Step 5: Document Your Process
+3. **Test your feature:**
+   - Make sure it works
+   - Verify no breaking changes
+   - Test edge cases
+
+### Step 4: Document Your Feature
 
 Update `README.md` with:
-- Which language/stack you chose (Node.js or Python)
-- What prompts you used with Cursor AI
-- How to run the project
-- Screenshot of the working application in browser
+- **Feature description:** What did you add?
+- **How to use:** How does the feature work?
+- **Screenshots/demos:** Visual proof it works
+- **Technical details:** How was it implemented?
 
-### Step 6: Commit and Push
+### Step 5: Commit and Push
 
 1. Commit all your changes:
    ```bash
    git add .
-   git commit -m "Complete Assignment 2: E2E Hello World"
+   git commit -m "Complete Assignment 3: Mini Feature - [your feature name]"
    git push
    ```
 
@@ -114,84 +124,81 @@ Update `README.md` with:
 
 Your submission will be evaluated based on:
 
-- [ ] Server runs without errors
-- [ ] Endpoint `/api/hello` exists and works
-- [ ] Endpoint returns correct JSON: `{ message: "Hello Vibe!" }`
-- [ ] HTML page loads and displays the message
-- [ ] Fetch API works correctly
-- [ ] README.md includes:
-  - [ ] Language/stack chosen
-  - [ ] Prompts used
-  - [ ] How to run
-  - [ ] Screenshot of working app
+- [ ] Feature works as described
+- [ ] No breaking changes to existing functionality
+- [ ] Code is clean and well-integrated
+- [ ] Feature is documented in README.md
+- [ ] Screenshots/demos included
 - [ ] All changes committed and pushed
 
 ---
 
 ## Submission Requirements
 
-1. **Working application:**
-   - Server runs and responds correctly
-   - Client displays message correctly
+1. **Working feature:**
+   - Feature works as described
+   - No breaking changes
+   - Well-integrated with existing code
 
 2. **Documentation:**
-   - Complete README.md
-   - Screenshot included
-   - Prompts documented
+   - Feature described in README.md
+   - How to use documented
+   - Screenshots included
 
-3. **Code:**
-   - All code files present
-   - Code is clean and readable
-   - Proper file structure
+3. **Code quality:**
+   - Clean, readable code
+   - Follows existing patterns
+   - Proper error handling
 
 ---
 
 ## Grading Rubric
 
-See [Grading Rubrics](../../docs/education/vibe-coding-grading-rubrics.md) for detailed criteria.
+See [Grading Rubrics](https://repodin-education.github.io/vibe-coding-materials/grading-rubrics.html) for detailed criteria.
 
 **Total Points:** 100 points
 
-- Functionality: 40 points
+- Feature Implementation: 40 points
 - Code Quality: 25 points
 - Documentation: 20 points
-- Process: 15 points
+- Creativity & Complexity: 15 points
 
 ---
 
 ## Tips for Success
 
-- **Use Cursor AI effectively:** Write clear, specific prompts
-- **Test incrementally:** Test server first, then client
-- **Handle errors:** Add error handling to your fetch call
-- **Document everything:** README is worth 20 points
-- **Take screenshot:** Include screenshot of working app
+- **Keep it simple:** One focused feature is better than many incomplete ones
+- **Test thoroughly:** Make sure nothing breaks
+- **Document well:** README is worth 20 points
+- **Be creative:** Show your problem-solving skills
+- **Use Cursor AI:** Generate code, then understand and modify it
 
 ---
 
 ## Common Issues and Solutions
 
-### Server won't start
-- Check Node.js/Python is installed
-- Install dependencies: `npm install` or `pip install -r requirements.txt`
-- Check port is not already in use
+### Feature breaks existing code
+- Test existing functionality after adding feature
+- Revert if needed and try different approach
+- Test incrementally
 
-### CORS error
-- Add CORS headers to server
-- See [Student Guide](../../docs/education/vibe-coding-student-guide.md) for examples
+### Feature too complex
+- Simplify your approach
+- Focus on one thing that works well
+- You can always extend later
 
-### Fetch not working
-- Check server is running
-- Verify endpoint URL is correct
-- Check browser console for errors
+### Feature too simple
+- Add some complexity
+- Make it more interesting
+- Show your skills
 
 ---
 
 ## Getting Help
 
 - Ask questions in the help channel
-- Review [Student Guide](../../docs/education/vibe-coding-student-guide.md)
-- Check [FAQ](../../docs/education/vibe-coding-faq.md)
+- Review [Student Guide](https://repodin-education.github.io/vibe-coding-materials/student-guide.html)
+- Check [FAQ](https://repodin-education.github.io/vibe-coding-materials/faq.html)
 - Contact your teacher if needed
 
 ---
@@ -201,8 +208,22 @@ See [Grading Rubrics](../../docs/education/vibe-coding-grading-rubrics.md) for d
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-12-20 | RepodIn Education Team | Initial version |
+| 1.1 | 2025-12-29 | RepodIn Education Team | Links updated   |
 
 ---
 
 **Next Review Date:** 2026-03-20
+
+
+
+
+
+
+
+
+
+
+
+
+
 
