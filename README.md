@@ -1,13 +1,5 @@
 # Assignment 3: Mini Feature Implementation
 
-> **"RepodIn Education is a teacher-first management and analytics layer on top of GitHub Classroom."**
-
-**Document Version:** 1.1
-**Last Updated:** 2025-12-29
-**Status:** Production
-**Maintainer:** RepodIn Education Team
----
-
 ## Learning Objectives
 
 By completing this assignment, you will:
